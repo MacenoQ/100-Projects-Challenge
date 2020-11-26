@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  /* background-color: wheat; */
+}
+
+#main-container {
+  background-color: wheat;
+  width: 1000px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#starting-page {
+  width: 1000px;
+  height: 700px;
+  background-image: url('https://imgix.bustle.com/inverse/d6/cd/bc/3e/13ca/45a3/b843/e1b151dc63ef/tumblrnn0lv3epsp1tqptlzo1540gif.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* align-items: center; */
+}
+
+#starting-page.active {
+  background-image: url('https://cdn.bulbagarden.net/upload/e/e3/FL_Viridian_Forest.png');
+  background-size: contain;
+  transition: background-image 0.5s;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+
+#header-top {
+  display: flex;
+  width: 1000px;
+  height: 110px;
+  justify-content: space-between;
+}
+
+#collection-container {
+  height: 100%;
+  width: 650px;
+  display: none;
+  /* justify-content: space-between; */
+}
+
+#collection-container.active {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+#collections {
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#collections::-webkit-scrollbar {
+  display: none;
+}
+
+#collection-img {
+  background-color: transparent;
+  margin-right: 2rem;
+  display: none;
+}
+
+#collection-img.active {
+  display: block;
+}
+
+/* #header-bottom {
+  height: 30px;
+} */
+
+#pikachu-running {
+  visibility: hidden;
+  z-index: 1;
+}
+
+#pikachu-running.active {
+  visibility: visible;
+  transform: translateX(950px);
+  transition: transform 30s linear;
+  transition-delay: 0.5s;
+}
+
+#pikachu-still {
+  display: none;
+  margin-left: 950px;
+}
+
+#pikachu-still.active {
+  display: block;
+}
+
+#pikachu-running {
+  visibility: hidden;
+  z-index: 1;
+}
+
+#pikachu-running.active {
+  visibility: visible;
+  transform: translateX(950px);
+  transition: transform 30s linear;
+  transition-delay: 0.5s;
+}
+
+#start-btn {
+  left: 425px;
+  top: 275px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-shadow: 5px 5px 2px rgb(61, 125, 202);
+  padding: 1rem;
+  background-image: linear-gradient(
+    to bottom,
+    #b01d3c 45%,
+    #362d38 45%,
+    #362d38 55%,
+    #b3b6c2 55%
+  );
+  color: rgb(255, 203, 5);
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 5px 5px 10px black;
+}
+
+#start-btn.active {
+  visibility: hidden;
+  transform: translate(500px) rotate(900deg) scale(0.2);
+  transition: transform 1s ease-in, visibility 1s;
+}
+
+#road-container {
+  top: 250px;
+  height: 400px;
+  width: 100%;
+  display: none;
+}
+
+#road-container.active {
+  display: block;
+  top: 150px;
+  overflow-x: hidden;
+}
+
+#image-container {
+  visibility: hidden;
+  margin-left: 1000px;
+}
+#image-container.active {
+  display: flex;
+  visibility: visible;
+
+  animation-name: images;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+
+  /* transform: translateX(-5000px);
+  transition: transform 30s linear; */
+}
+
+@keyframes images {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5000px);
+  }
+}
+
+.fly {
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.other {
+  margin-right: 50px;
+  margin-top: 250px;
+}
+
+.caught-pokemon {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.pokemon:hover {
+  cursor: pointer;
+}
+.pokemon.caught {
+  visibility: hidden;
+  transform: scale(0.1);
+  transition: transform 1s linear, visibility 1s linear;
+}
+
+#ball-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: none;
+}
+#ball-container.active {
+  display: block;
+}
+
+#ending-page {
+  border-radius: 1rem;
+  height: 80px;
+  width: 400px;
+  display: none;
+  position: absolute;
+  left: 300px;
+  top: 295px;
+}
+#ending-page * {
+  outline: none;
+}
+
+#ending-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#restart,
+#exit {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 5px 5px 10px black;
+}
+
+#restart {
+  background-image: linear-gradient(
+    to bottom,
+    #b01d3c 45%,
+    #362d38 45%,
+    #362d38 55%,
+    #b3b6c2 55%
+  );
+}
+
+#exit {
+  background-image: linear-gradient(
+    to bottom,
+    #f7c505 45%,
+    #362d38 45%,
+    #362d38 55%,
+    #4160a7 55%
+  );
+}
+
+#restart:hover,
+#exit:hover {
+  transform: scale(1.1);
+}
+
+#ending-page.active {
+  display: block;
+}

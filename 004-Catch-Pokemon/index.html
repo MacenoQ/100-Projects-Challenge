@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch it!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/3dfadb3cf3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <div id="starting-page">
+        <div id="header-container">
+          <div id="header-top">
+            <div id="collection-container">
+              <div>
+                <img
+                  src="pokeball-open.png"
+                  alt=""
+                  id="collection-img"
+                  width="50px"
+                />
+              </div>
+              <div id="collections"></div>
+            </div>
+            <div id="logo-img">
+              <img
+                id="start-img"
+                src="https://brandpalettes.com/wp-content/uploads/2018/11/International_Poke%CC%81mon_logo-300x110.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="header-bottom">
+            <div id="loading-bar-container">
+              <img
+                src="pikachu-still.gif"
+                alt=""
+                id="pikachu-still"
+                class="show-after-run"
+                width="50px"
+              />
+              <img
+                src="pikachu.gif"
+                alt=""
+                id="pikachu-running"
+                width="50px"
+                class="unshow-after-run"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button id="start-btn" class="start-btn">START!</button>
+        <div id="road-container">
+          <div id="image-container"></div>
+        </div>
+        <div id="ending-page">
+          <div id="ending-container">
+            <button id="restart">PLAY AGAIN</button>
+            <button id="exit">EXIT</button>
+          </div>
+        </div>
+        <div id="ball-container">
+          <img
+            src="https://webstockreview.net/images/pokeball-clipart-transparent-background-3.png"
+            alt=""
+            id="ball"
+            width="25px"
+          />
+          x
+          <span id="ball-count"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

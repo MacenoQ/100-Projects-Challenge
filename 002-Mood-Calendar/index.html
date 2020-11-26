@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Meal Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/3dfadb3cf3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <div id="header-container"></div>
+      <div id="body-container">
+        <div id="note-container" class="note-container">
+          <div id="note-header">
+            <ul id="tools-bar">
+              <li class="mood mood1" id="mood1" style="color: #2d6b5f">
+                <i class="far fa-laugh-squint"></i>
+              </li>
+              <li class="mood mood2" id="mood2" style="color: #72e3a6">
+                <i class="far fa-smile-beam"></i>
+              </li>
+              <li class="mood mood3" id="mood3" style="color: #dff4c7">
+                <i class="far fa-meh"></i>
+              </li>
+              <li class="mood mood4" id="mood4" style="color: #edbf98">
+                <i class="far fa-frown"></i>
+              </li>
+              <li class="mood mood5" id="mood5" style="color: #ea3d36">
+                <i class="far fa-dizzy"></i>
+              </li>
+            </ul>
+            <li id="close-btn"><i class="fas fa-times"></i></li>
+          </div>
+          <textarea name="note" id="note" cols="30" rows="10"></textarea>
+          <button id="save-btn">SAVE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

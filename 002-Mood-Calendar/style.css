@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-container {
+  width: 1200px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.month {
+  width: 300px;
+  height: 220px;
+}
+
+.month-header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.week-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.week span {
+  font-size: 0.8rem;
+}
+
+.week div {
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 0.3rem auto;
+  border-radius: 50%;
+  background-color: #888;
+  color: whitesmoke;
+}
+
+.week div:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background-color: orange;
+}
+
+.placeholder {
+  visibility: hidden;
+}
+
+/* styles for moods and notes */
+#note-container {
+  /* display: flex; */
+  flex-direction: column;
+  width: 300px;
+  background-color: black;
+  position: fixed;
+  z-index: 100000;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px black;
+  display: none;
+}
+
+#note-container.note-active {
+  display: flex;
+}
+
+#close-btn {
+  color: white;
+  font-size: 2rem;
+}
+
+#note-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  font-size: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+#tools-bar {
+  font-size: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.mood.mood-active i {
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.mood:hover {
+  cursor: pointer;
+}
+
+/* #mood1 {
+  color: #2d6b5f;
+}
+#mood2 {
+  color: #72e3a6;
+}
+#mood3 {
+  color: #dff4c7;
+}
+#mood4 {
+  color: #edbf98;
+}
+#mood5 {
+  color: #ea3d36;
+} */
+
+#close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+/* #close-btn:not(:hover) {
+  transform: rotate(-90deg);
+  transition: 1s ease-in-out;
+} */
+
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+#save-btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: black;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+#save-btn:hover {
+  color: orange;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
