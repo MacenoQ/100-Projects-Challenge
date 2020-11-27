@@ -224,6 +224,7 @@ img {
 .pokemon.caught {
   visibility: hidden;
   transform: scale(0.1);
+  pointer-events: none;
   transition: transform 1s linear, visibility 1s linear;
 }
 
